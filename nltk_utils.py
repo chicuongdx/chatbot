@@ -1,6 +1,5 @@
 import nltk
 import numpy as np
-import torch
 
 stremer = nltk.stem.PorterStemmer()
 

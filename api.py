@@ -2,11 +2,11 @@ import random
 import time
 import json
 import torch
-from model import NeuralNet
+from model.intents_model import NeuralNet
 from nltk_utils import bag_of_words, tokenize
 import fastapi
 import uvicorn
-from model.message import Message
+from model_api.message import Message
 
 #device = torch.device('cpu')
 device = torch.device('cudu:0' if torch.cuda.is_available() else 'cpu')
