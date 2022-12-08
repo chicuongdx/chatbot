@@ -9,8 +9,10 @@ from torch.utils.data import Dataset, DataLoader
 
 from model.intents_model import NeuralNet
 
-with open('intents.json') as file:
+with open('intents.json', encoding='utf8') as file:
     intents = json.load(file)
+
+#how to train with nltk dictionary vietnamese
 
 all_words = []
 tags = []
