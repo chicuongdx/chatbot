@@ -9,8 +9,8 @@ import uvicorn
 from model_api.message import Message
 
 #device = torch.device('cpu')
-device = torch.device('cudu:0' if torch.cuda.is_available() else 'cpu')
-with open('intents.json', 'r') as f:
+device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+with open('intents.json', 'r', encoding='utf8') as f:
     intents = json.load(f)
 
 FILE = 'data.pth'
