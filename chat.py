@@ -25,6 +25,9 @@ model.eval()
 
 bot_name = "Sam"
 print("Let's chat! (type 'quit' to exit)")
+
+
+
 while True:
     sentence = input('You: ')
     if sentence == "quit":
@@ -43,6 +46,14 @@ while True:
     prob = probs[0][predicted.item()]
     if prob.item() > 0.75:
         for intent in intents['intents']:
+            if tag == 'size':
+                height = int(sentence.split()[-1].strip())
+                
+                #sửa size chỗ này
+                if height < 150:
+                    size = "S"
+                print(f"{bot_name}: {intent['responses']}" + " " + size)
+
             if tag == intent["tag"]:
                 print(f"{bot_name}: {random.choice(intent['responses'])}")
     else:

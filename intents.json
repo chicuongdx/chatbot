@@ -523,6 +523,15 @@
             "responses": [
                 "I was made in 2020, if that's what you are asking!"
             ]
+        },
+        {
+            "tag": "size",
+            "patterns": [
+                "Cân nặng của tôi là:"
+            ],
+            "responses": [
+                "Chiều cao của bạn là: "
+            ]
         }
     ]
 }
